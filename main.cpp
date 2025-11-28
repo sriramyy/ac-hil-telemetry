@@ -8,7 +8,7 @@ int main() {
     return 0;
 
     Vehicle myCar(5000);
-    TrackSession mySession();
+    TrackSession mySession("Spa");
 
 
 }
