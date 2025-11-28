@@ -67,6 +67,18 @@ build CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj: CXX_COMPILER__ac_hil
   OBJECT_DIR = CMakeFiles\ac_hil_telemetry.dir
   OBJECT_FILE_DIR = CMakeFiles\ac_hil_telemetry.dir
 
+build CMakeFiles/ac_hil_telemetry.dir/Utils.cpp.obj: CXX_COMPILER__ac_hil_telemetry_unscanned_Debug C$:/Users/srira/Documents/.Main$ Folder/projects/ac-hil-telemetry/Utils.cpp || cmake_object_order_depends_target_ac_hil_telemetry
+  DEP_FILE = CMakeFiles\ac_hil_telemetry.dir\Utils.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ac_hil_telemetry.dir
+  OBJECT_FILE_DIR = CMakeFiles\ac_hil_telemetry.dir
+
+build CMakeFiles/ac_hil_telemetry.dir/SerialBridge.cpp.obj: CXX_COMPILER__ac_hil_telemetry_unscanned_Debug C$:/Users/srira/Documents/.Main$ Folder/projects/ac-hil-telemetry/SerialBridge.cpp || cmake_object_order_depends_target_ac_hil_telemetry
+  DEP_FILE = CMakeFiles\ac_hil_telemetry.dir\SerialBridge.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ac_hil_telemetry.dir
+  OBJECT_FILE_DIR = CMakeFiles\ac_hil_telemetry.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ac_hil_telemetry
@@ -75,7 +87,7 @@ build CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj: CXX_COMPILER__ac_hil
 #############################################
 # Link the executable ac_hil_telemetry.exe
 
-build ac_hil_telemetry.exe: CXX_EXECUTABLE_LINKER__ac_hil_telemetry_Debug CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj CMakeFiles/ac_hil_telemetry.dir/Vehicle.cpp.obj CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj
+build ac_hil_telemetry.exe: CXX_EXECUTABLE_LINKER__ac_hil_telemetry_Debug CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj CMakeFiles/ac_hil_telemetry.dir/Vehicle.cpp.obj CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj CMakeFiles/ac_hil_telemetry.dir/Utils.cpp.obj CMakeFiles/ac_hil_telemetry.dir/SerialBridge.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ac_hil_telemetry.dir

@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
 
 // TODO: add sector time support
 // struct SectorTime {
@@ -27,11 +28,12 @@ public:
     // Add a Lap struct, returns whether new lap is fastest lap
     [[nodiscard]] bool addLap(Lap newLap);
 
+    // get laps as Lap struct
     [[nodiscard]] Lap getFastestLap() const;
     [[nodiscard]] Lap getLatestLap() const;
     [[nodiscard]] int getTotalLaps() const;
     [[nodiscard]] const std::vector<Lap>& getAllLaps() const;
 
     // Get the trend from the last x laps (Using Linear Regression)
-    [[nodiscard]] float getTrend(int x) const;
+    [[nodiscard]] float getTrend(int x = 5) const;
 };

@@ -1,10 +1,6 @@
 # ninja log v6
-8	711	7860066749191342	CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj	2b82fd4aaf8ba486
-714	1044	7860066756249191	ac_hil_telemetry.exe	2059e889c0691653
+56	912	7860532763101736	CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj	2b82fd4aaf8ba486
 80	282	7860109905538210	CMakeFiles/ac_hil_telemetry.dir/Vehicle.cpp.obj	793b46a348ed5234
-75	623	7860109905498197	CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj	2b82fd4aaf8ba486
-24	253	7860110164526999	CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj	dd334b5cdfffc347
-254	575	7860110166813743	ac_hil_telemetry.exe	f185416a3f5739ca
-26	435	7860114742190494	CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj	2b82fd4aaf8ba486
-31	440	7860114742240351	CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj	dd334b5cdfffc347
-440	529	7860114746333177	ac_hil_telemetry.exe	f185416a3f5739ca
+913	1112	7860532771671042	ac_hil_telemetry.exe	75b14c698a71a516
+36	540	7860141163842323	CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj	dd334b5cdfffc347
+48	1350	7860531765221520	CMakeFiles/ac_hil_telemetry.dir/Utils.cpp.obj	276eb6c5e3efc65a

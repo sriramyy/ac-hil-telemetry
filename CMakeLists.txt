@@ -7,4 +7,9 @@ add_executable(ac_hil_telemetry main.cpp
         Vehicle.h
         Vehicle.cpp
         TrackSession.cpp
-        TrackSession.h)
+        TrackSession.h
+        Utils.cpp
+        Utils.h
+        SerialBridge.cpp
+        SerialBridge.h
+)

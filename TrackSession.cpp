@@ -1,6 +1,7 @@
 #include "TrackSession.h"
 #include <limits>
 #include <vector>
+#include "Utils.h"
 
 TrackSession::TrackSession(const std::string& trackName) : trackName(trackName) {
     fastestLap.time = std::numeric_limits<float>::max();
