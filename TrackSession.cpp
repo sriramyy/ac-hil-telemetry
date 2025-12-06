@@ -4,11 +4,22 @@
 #include "Utils.h"
 
 TrackSession::TrackSession(const std::string& trackName) : trackName(trackName) {
-    fastestLap.time = std::numeric_limits<float>::max();
+    fastestLap.time.total = std::numeric_limits<float>::max();
+    fastestLap.time.s1 = std::numeric_limits<float>::max();
+    fastestLap.time.s2 = std::numeric_limits<float>::max();
+    fastestLap.time.s3 = std::numeric_limits<float>::max();
     fastestLap.num = 0;
 
-    latestLap.time = 0;
+    latestLap.time.total = 0;
+    latestLap.time.s1 = 0;
+    latestLap.time.s2 = 0;
+    latestLap.time.s3 = 0;
     latestLap.num = 0;
+
+    fastestSectors.s1 = std::numeric_limits<float>::max();
+    fastestSectors.s2 = std::numeric_limits<float>::max();
+    fastestSectors.s3 = std::numeric_limits<float>::max();
+    fastestSectors.total = std::numeric_limits<float>::max();
 }
 
 bool TrackSession::addLap(Lap newLap) {
@@ -17,11 +28,30 @@ bool TrackSession::addLap(Lap newLap) {
     // make new latest lap
     latestLap = newLap;
 
-    if (newLap.isValid && newLap.time < fastestLap.time) {
+    if (!newLap.isValid) {
+        // if lap is not valid don't check for fastest sectors / lap.
+        return false;
+    }
+    if (newLap.time.total < fastestLap.time.total) {
         // fastest lap
         fastestLap = newLap;
         return true;
     }
+
+    // check for fastest sector times
+    if (newLap.time.s1 < fastestSectors.s1) {
+        fastestSectors.s1 = newLap.time.s1;
+    }
+    if (newLap.time.s2 < fastestSectors.s2) {
+        fastestSectors.s2 = newLap.time.s2;
+    }
+    if (newLap.time.s3 < fastestSectors.s3) {
+        fastestSectors.s3 = newLap.time.s3;
+    }
+
+    // recalc fastest possible time
+    fastestSectors.calcTotal();
+
     return false;
 }
 
@@ -41,6 +71,10 @@ const std::vector<Lap>& TrackSession::getAllLaps() const {
     return allLaps;
 }
 
+SectorTime TrackSession::getFastestSectors() const {
+    return fastestSectors;
+}
+
 float TrackSession::getTrend(int x) const {
     // implement linear regression
 
@@ -50,7 +84,7 @@ float TrackSession::getTrend(int x) const {
     for (auto it = allLaps.rbegin(); it != allLaps.rend(); ++it) {
         if (validTimes.size() >= x) break; // stop if we have x laps
         if (it->isValid) {
-            validTimes.push_back(it->time);
+            validTimes.push_back(it->time.total);
         }
     }
 

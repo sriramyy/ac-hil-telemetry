@@ -4,3 +4,8 @@
 913	1112	7860532771671042	ac_hil_telemetry.exe	75b14c698a71a516
 36	540	7860141163842323	CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj	dd334b5cdfffc347
 48	1350	7860531765221520	CMakeFiles/ac_hil_telemetry.dir/Utils.cpp.obj	276eb6c5e3efc65a
+91	758	7860561897376349	CMakeFiles/ac_hil_telemetry.dir/SerialBridge.cpp.obj	6f84efc89e2b6acb
+63	1196	7860561897104503	CMakeFiles/ac_hil_telemetry.dir/main.cpp.obj	2b82fd4aaf8ba486
+71	1386	7860561897189539	CMakeFiles/ac_hil_telemetry.dir/TrackSession.cpp.obj	dd334b5cdfffc347
+82	1410	7860561897295582	CMakeFiles/ac_hil_telemetry.dir/Utils.cpp.obj	276eb6c5e3efc65a
+1410	1646	7860561910574461	ac_hil_telemetry.exe	7119c2874ec36193
